@@ -1,0 +1,359 @@
+PAGINA DE INICIO: 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JourLife</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Bienvenidos a la nueva agenda sacada este mes del 2024. JourLife 4ever!</h1>
+        <form id="loginForm">
+            <input type="text" placeholder="Username" id="username" required>
+           <h2> <a href="agenda.html"> Ingresar</a></h2>
+    </div>
+    <script src="script.js"></script>
+
+  </body>
+</html>
+
+PAGINA DE LA AGENDA
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JourLife</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="agenda-container">
+        <div class="header">
+            <div class="months">
+                <span>SEP</span><span>OCT</span><span>NOV</span><span>DEC</span>
+                <span>JAN</span><span>FEB</span><span>MAR</span><span>APR</span>
+                <span>MAY</span><span>JUN</span><span>JUL</span><span>AUG</span>
+            </div>
+            <h2>SEPTEMBER 2024</h2>
+        </div>
+
+        <div class="content">
+            <div class="todo-list">
+                <h3>Cosas que hacer:</h3>
+                <ul id="taskList">
+
+                </ul>
+                <input type="text" id="newTaskInput" placeholder="New task">
+                <button id="addTaskButton">Añadir tarea</button>
+                <div class="sticky-notes">
+                    <div class="note green" contenteditable="true">Nota 1</div>
+                    <div class="note pink" contenteditable="true">Nota 2</div>
+                    <div class="note yellow" contenteditable="true">Nota 3</div>
+                </div>
+            </div>
+
+            <div class="calendar">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Lunes</th>
+                            <th>Martes</th>
+                            <th>Miercoles</th>
+                            <th>Jueves</th>
+                            <th>Viernes</th>
+                            <th>Sabado</th>
+                            <th>Domingo</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>11</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>22</td>
+                            <td>23</td>
+                            <td>24</td>
+                            <td>25</td>
+                            <td>26</td>
+                        </tr>
+                        <tr>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="nan.js"></script>
+</body>
+</html>
+
+CODIGO DE CSS
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #cea6ce;
+}
+
+.login-container {
+    width: 300px;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-container h1 {
+    font-size: 24px;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #5cb85c;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-container button:hover {
+    background-color: #4cae4c;
+}
+
+.agenda-container {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.months span {
+    margin: 0 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #888;
+    cursor: pointer;
+}
+
+.header h2 {
+    font-size: 28px;
+    color: #333;
+    text-align: right;
+}
+
+.content {
+    display: flex;
+    gap: 20px;
+}
+
+.todo-list {
+    width: 35%;
+}
+
+.todo-list h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.todo-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.todo-list ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #444;
+    display: flex;
+    align-items: center;
+}
+
+.todo-list ul li input {
+    margin-right: 10px;
+}
+
+.todo-list input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.todo-list button {
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.todo-list button:hover {
+    background-color: #0056b3;
+}
+
+.sticky-notes {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.sticky-notes .note {
+    width: 120px;
+    height: 120px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    overflow-y: auto;
+    cursor: text;
+}
+
+.sticky-notes .note.green { background-color: #c3f7d1; }
+.sticky-notes .note.pink { background-color: #f7c3d9; }
+.sticky-notes .note.yellow { background-color: #f7f2c3; }
+
+.calendar {
+    width: 65%;
+}
+
+.calendar table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.calendar th, .calendar td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+}
+
+
+CODIGO DE JAVA
+
+document.addEventListener('DOMContentLoaded', function() {
+    const taskList = document.getElementById('taskList');
+    const newTaskInput = document.getElementById('newTaskInput');
+    const addTaskButton = document.getElementById('addTaskButton');
+
+    loadTasks();
+
+    addTaskButton.addEventListener('click', function() {
+        const taskText = newTaskInput.value.trim();
+        if (taskText !== '') {
+            addTask(taskText);
+            newTaskInput.value = '';  
+            saveTasks();
+        }
+    });
+
+    function addTask(taskText) {
+        const li = document.createElement('li');
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+
+        li.appendChild(checkbox);
+        li.appendChild(document.createTextNode(' ' + taskText));
+
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Delete';
+        deleteButton.className = 'delete-button';
+        deleteButton.addEventListener('click', function() {
+            li.remove();
+            saveTasks();
+        });
+
+        li.appendChild(deleteButton);
+        taskList.appendChild(li);
+    }
+
+    function saveTasks() {
+        const tasks = [];
+        taskList.querySelectorAll('li').forEach(li => {
+            tasks.push({
+                text: li.textContent.replace('Delete', '').trim(),
+                completed: li.querySelector('input').checked
+            });
+        });
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+    }
+
+    function loadTasks() {
+        const tasks = JSON.parse(localStorage.getItem('tasks') || '[]');
+        tasks.forEach(task => {
+            addTask(task.text);
+            const lastTask = taskList.lastElementChild;
+            lastTask.querySelector('input').checked = task.completed;
+        });
+    }
+});
+
+
+
+
+
